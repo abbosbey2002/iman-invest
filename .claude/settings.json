@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(google-chrome --headless=new --disable-gpu --no-sandbox --hide-scrollbars --force-device-scale-factor=1 --user-data-dir=/tmp/iman-c-after --lang=uz --accept-lang=uz --window-size=390,150 --virtual-time-budget=10000 --screenshot=/tmp/iman-shots/after-smaller-brand.png http://localhost:5173/)"
+    ]
+  }
+}

@@ -36,16 +36,16 @@ onBeforeUnmount(() => {
       class="backdrop-blur-xl backdrop-saturate-150 transition-colors duration-300"
       :class="scrolled ? 'bg-cream/95' : 'bg-cream/85'"
     >
-      <div class="max-w-7xl mx-auto px-[clamp(1.25rem,4vw,4.5rem)] py-2.5 grid grid-cols-[auto_1fr_auto] gap-6 items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[clamp(1.25rem,4vw,4.5rem)] py-2.5 flex items-center gap-3 lg:gap-6">
         <a href="#top" @click="closeMenu" aria-label="IMAN Invest"
-           class="inline-flex items-center gap-2.5 no-underline">
-          <span class="grid place-items-center w-[34px] h-[34px]">
-            <img src="/iman-logo.png" alt="" class="w-[34px] h-[34px] object-contain" />
+           class="inline-flex items-center gap-2 sm:gap-2.5 no-underline shrink-0 min-w-0">
+          <span class="grid place-items-center w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] shrink-0">
+            <img src="/iman-logo.png" alt="" class="w-full h-full object-contain" />
           </span>
-          <span class="font-display font-medium text-[1.25rem] tracking-[0.04em] text-ink leading-none">IMAN</span>
+          <span class="font-display font-medium text-[1.1rem] sm:text-[1.25rem] tracking-[0.04em] text-ink leading-none">IMAN</span>
         </a>
 
-        <nav aria-label="Primary" class="hidden lg:flex justify-center">
+        <nav aria-label="Primary" class="hidden lg:flex flex-1 justify-center">
           <ul class="flex gap-0 m-0 p-0 list-none">
             <li><a href="#how" class="topnav-link">{{ t("nav.how") }}</a></li>
             <li><a href="#calc" class="topnav-link">{{ t("nav.calc") }}</a></li>
@@ -54,9 +54,9 @@ onBeforeUnmount(() => {
           </ul>
         </nav>
 
-        <div class="flex items-center gap-1.5 sm:gap-2 justify-end">
+        <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
           <LangSwitcher />
-          <a href="#contact" class="btn btn--sm hidden sm:inline-flex">
+          <a href="#contact" class="btn btn--sm !hidden sm:!inline-flex">
             <span>{{ t("nav.app") }}</span>
             <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
               <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
           </a>
 
           <button
-            class="burger lg:hidden"
+            class="burger lg:hidden shrink-0"
             :aria-expanded="open"
             :aria-label="t('nav.menu')"
             @click="toggleMenu"
