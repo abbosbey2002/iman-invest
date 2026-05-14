@@ -1,0 +1,20 @@
+const puppeteer = require('puppeteer')
+;(async () => {
+  const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] })
+  // Mobile header zoom
+  const p1 = await browser.newPage()
+  await p1.setViewport({ width: 390, height: 100, deviceScaleFactor: 2 })
+  await p1.goto('http://localhost:5173', { waitUntil: 'networkidle0', timeout: 15000 })
+  await new Promise(r => setTimeout(r, 400))
+  await p1.screenshot({ path: '/tmp/shots/header-m.png' })
+  await p1.close()
+  // Desktop header zoom
+  const p2 = await browser.newPage()
+  await p2.setViewport({ width: 1440, height: 80, deviceScaleFactor: 2 })
+  await p2.goto('http://localhost:5173', { waitUntil: 'networkidle0', timeout: 15000 })
+  await new Promise(r => setTimeout(r, 400))
+  await p2.screenshot({ path: '/tmp/shots/header-d.png' })
+  await p2.close()
+  console.log('done')
+  await browser.close()
+})()

@@ -9,13 +9,11 @@ const NAMES = { uz: "O‘zbek", ru: "Русский", en: "English" }
   <footer class="bg-ink-deep text-cream py-[clamp(3rem,6vw,5rem)] px-[clamp(1.25rem,4vw,4.5rem)] pb-8">
     <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 pb-12 border-b border-line-cream">
       <div>
-        <a href="#top" class="inline-flex items-center gap-2.5 no-underline">
-          <span class="grid place-items-center w-[34px] h-[34px]">
-            <img src="/iman-logo.png" alt="" class="w-[34px] h-[34px] object-contain" />
-          </span>
-          <span class="font-display font-medium text-[1.25rem] tracking-[0.04em] text-cream leading-none">IMAN</span>
+        <a href="#top" class="inline-flex items-center no-underline">
+          <img src="/iman-logo.png" alt="IMAN Invest"
+               class="h-9 w-auto object-contain brightness-0 invert opacity-90" />
         </a>
-        <p class="mt-5 font-display italic text-[1.05rem] text-cream/72 max-w-[28ch] leading-[1.5]">{{ t("footer.motto") }}</p>
+        <p class="mt-5 font-display italic text-[1.05rem] text-cream/72 max-w-[28ch] leading-normal">{{ t("footer.motto") }}</p>
       </div>
 
       <div>

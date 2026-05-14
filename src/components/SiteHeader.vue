@@ -38,11 +38,9 @@ onBeforeUnmount(() => {
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[clamp(1.25rem,4vw,4.5rem)] py-2.5 flex items-center gap-3 lg:gap-6">
         <a href="#top" @click="closeMenu" aria-label="IMAN Invest"
-           class="inline-flex items-center gap-2 sm:gap-2.5 no-underline shrink-0 min-w-0">
-          <span class="grid place-items-center w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] shrink-0">
-            <img src="/iman-logo.png" alt="" class="w-full h-full object-contain" />
-          </span>
-          <span class="font-display font-medium text-[1.1rem] sm:text-[1.25rem] tracking-[0.04em] text-ink leading-none">IMAN</span>
+           class="inline-flex items-center no-underline shrink-0">
+          <img src="/iman-logo.png" alt="IMAN Invest"
+               class="h-7 sm:h-8 w-auto object-contain" />
         </a>
 
         <nav aria-label="Primary" class="hidden lg:flex flex-1 justify-center">
@@ -56,7 +54,7 @@ onBeforeUnmount(() => {
 
         <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
           <LangSwitcher />
-          <a href="#contact" class="btn btn--sm !hidden sm:!inline-flex">
+          <a href="#contact" class="btn btn--sm hidden! sm:inline-flex!">
             <span>{{ t("nav.app") }}</span>
             <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
               <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
@@ -83,7 +81,7 @@ onBeforeUnmount(() => {
         <div class="drawer-backdrop absolute inset-0 bg-ink/45" @click="closeMenu"></div>
         <div class="drawer-panel absolute top-0 right-0 bottom-0 w-[min(420px,92vw)] bg-cream flex flex-col px-6 pt-5 pb-8 shadow-[-30px_0_80px_-20px_rgba(10,44,40,0.35)]">
           <div class="flex items-center justify-between pb-4 border-b border-line mb-6">
-            <span class="font-display font-medium text-[1.25rem] tracking-[0.04em] text-ink">IMAN</span>
+            <img src="/iman-logo.png" alt="IMAN Invest" class="h-7 w-auto object-contain" />
             <button :aria-label="t('nav.close')" @click="closeMenu" type="button"
                     class="w-11 h-11 rounded-full border border-line bg-transparent grid place-items-center text-ink hover:bg-paper transition-colors">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
